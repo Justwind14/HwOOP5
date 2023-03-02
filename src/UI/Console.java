@@ -33,6 +33,7 @@ public class Console implements View{
     public void end() {
         flag = false;
     }
+
     public void addPhone(){
         System.out.println("Введите ФИО и город через ЭНТЕР");
         StringBuilder sb = new StringBuilder();
@@ -42,10 +43,11 @@ public class Console implements View{
         sb.append(scan.nextLine() + " ");
         System.out.println("Введите номер телефона");
         sb.append(scan.nextLine() + " ");
-        System.out.println("Введите расширение для файла со списком контактов (txt/json/xml");
+        System.out.println("Введите расширение для записи контакта в файл (txt/json/xml)");
         sb.append(scan.nextLine());
         presenter.toModel(sb.toString(), command);
     }
+
     public void delPhone(){
         System.out.println("Введите ФИО и город через ЭНТЕР для удаления контакта");
         StringBuilder sb = new StringBuilder();
@@ -55,6 +57,7 @@ public class Console implements View{
         sb.append(scan.nextLine());
         presenter.toModel(sb.toString(), command);
     }
+
     public void takePhone(){
         System.out.println("Введите ФИО и город через ЭНТЕР");
         StringBuilder sb = new StringBuilder();
@@ -62,6 +65,12 @@ public class Console implements View{
         sb.append(scan.nextLine() + " ");
         sb.append(scan.nextLine() + " ");
         sb.append(scan.nextLine() + " ");
+        presenter.toModel(sb.toString(), command);
+    }
+
+    public void ShowContacts() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(" ");
         presenter.toModel(sb.toString(), command);
     }
 }

@@ -1,9 +1,6 @@
 package UI;
 
-import UI.Paragraps.AddPhoneNumber;
-import UI.Paragraps.DeletePhoneNumber;
-import UI.Paragraps.Exit;
-import UI.Paragraps.GetPhoneNumber;
+import UI.Paragraps.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,6 +14,7 @@ public class Menu {
         paragraphs.add(new AddPhoneNumber(cons));
         paragraphs.add(new DeletePhoneNumber(cons));
         paragraphs.add(new GetPhoneNumber(cons));
+        paragraphs.add(new AllContacts(cons));
         paragraphs.add(new Exit(cons));
     }
 
